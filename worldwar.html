@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <input type="text" name="place" id="nplace" />
+    <button onclick="submit()">Click</button>
+    <script>
+      let b = [];
+      function submit() {
+        let str = document.getElementById("nplace").value;
+        console.log(str);
+        function rotate(text, noOfChars = 0) {
+          const n = noOfChars % text.length;
+          const part1 = text.slice(0, n);
+          const part2 = text.slice(n);
+          return `${part2}${part1}`;
+        }
+        function rotateRight(text, noOfChars = 0) {
+          const n = noOfChars % text.length;
+          return rotate(text, text.length - n);
+        }
+
+        let result = rotateRight(str, 1);
+
+        console.log(result);
+
+        for (j = 0; j < result.length; j++) {
+          b[j] = String.fromCharCode(result.charCodeAt(j) + parseInt(1));
+        }
+        console.log(b.join(""));
+      }
+    </script>
+  </body>
+</html>

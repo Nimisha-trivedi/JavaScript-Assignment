@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      class Book {
+        constructor(title, author) {
+          this.title = title;
+          this.author = author;
+          this.getTitle = function () {
+            return "Title:" + " " + this.title;
+          };
+          this.getAuthor = function () {
+            return "Author:" + " " + this.author;
+          };
+        }
+      }
+      mybooks = new Book("Half Girlfriend", "Chetan Bhagat");
+      console.log(mybooks.getTitle(), mybooks.getAuthor());
+    </script>
+  </body>
+</html>

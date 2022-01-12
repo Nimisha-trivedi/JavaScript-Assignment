@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      class Shape {
+        constructor(Volume) {
+          this.Volume = Volume;
+        }
+        getVolume() {
+          return "Volume:" + " " + this.Volume;
+        }
+      }
+      class Cylinder extends Shape {
+        constructor(Volume, radius, height) {
+          super(Volume);
+          this.radius = radius;
+          this.height = height;
+          this.Volume = Math.PI * this.radius * this.radius * this.height;
+        }
+        cyVolume() {
+          super.getVolume();
+        }
+      }
+      class Cuboid extends Shape {
+        constructor(Volume, length, height, width) {
+          super(Volume);
+          this.length = length;
+          this.height = height;
+          this.width = width;
+          this.Volume = this.length * this.height * this.width;
+        }
+        cuVolume() {
+          super.getVolume();
+        }
+      }
+      class Cone extends Shape {
+        constructor(Volume, radius, height) {
+          super(Volume);
+          this.radius = radius;
+          this.height = height;
+          this.Volume = Math.PI * this.radius * this.radius * (this.height / 3);
+        }
+        cyVolume() {
+          super.getVolume();
+        }
+      }
+      class Sphere extends Shape {
+        constructor(Volume, radius) {
+          super(Volume);
+          this.radius = radius;
+          this.Volume =
+            (4 / 3) * Math.PI * this.radius * this.radius * this.radius;
+        }
+        cyVolume() {
+          super.getVolume();
+        }
+      }
+      cyvolume = new Cylinder(0, 3, 5);
+      cuvolume = new Cuboid(0, 6, 8, 4);
+      covolume = new Cone(0, 9, 2);
+      spvolume = new Sphere(0, 2);
+      console.log(cyvolume.getVolume());
+      console.log(cuvolume.getVolume());
+      console.log(covolume.getVolume());
+      console.log(spvolume.getVolume());
+    </script>
+  </body>
+</html>

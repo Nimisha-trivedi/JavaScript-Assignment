@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let arr1 = ["S", "N", "S", "S", "N", "N", "S"];
+      let arr2 = [10, 30, 40, 10, 10, 20, 40];
+      let spice = [];
+      let nspice = [];
+      let result = [];
+      for (i = 0; i < arr1.length; i++) {
+        if (arr1[i] == "S") {
+          spice.push(arr2[i]);
+        } else {
+          nspice.push(arr2[i]);
+        }
+      }
+      const spiceres = spice.reduce((a, b) => a + b);
+      const nspiceres = nspice.reduce((a, b) => a + b);
+      result.push(spiceres + nspiceres / 2);
+      result.push(nspiceres / 2);
+      console.log(spice);
+      console.log(nspice);
+      console.log(result);
+    </script>
+  </body>
+</html>

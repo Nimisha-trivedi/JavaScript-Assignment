@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parity check</title>
+  </head>
+  <body>
+    <script>
+      let a = "11110";
+      let count = 0;
+      let arr = a.split("");
+      if (arr[arr.length - 1] != "1") {
+        alert("not Corrupted");
+      } else {
+        for (i = 0; i < arr.length - 1; i++) {
+          if (arr[i] == "1") {
+            count = count + 1;
+            console.log(count);
+          }
+        }
+        console.log(count);
+        if (count % 2 == 0) {
+          alert("Corrupted");
+        } else {
+          alert("not Corrupted");
+        }
+      }
+    </script>
+  </body>
+</html>

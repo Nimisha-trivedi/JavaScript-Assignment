@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let arr = [
+        [1, 0, 0],
+        [0, 1, 0],
+        [0, 0, 1],
+      ];
+      let map = arr.map(function (row) {
+        return row.map(function (cell) {
+          if (cell == "1") {
+            return (cell = 0);
+          } else {
+            return (cell = 1);
+          }
+        });
+      });
+      console.log(map);
+    </script>
+  </body>
+</html>
